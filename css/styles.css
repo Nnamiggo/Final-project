@@ -4,17 +4,17 @@
 
 
 body  {
-	font:  100% 'Century Gothic', sans-serif;
-	max-width: 100%;
+	font-family: Verdana, Geneva, sans-serif;
+  max-width: 100%;
 	overflow-x: hidden;
-	background: #dcded9;
-	/* background-image: url(file:///C|/KBconsult/imgs/bg1.jpg); background-repeat: repeat; */
+	background-color: #dcded9;
 	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
 	padding: 0;
 	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
 	color: #036;
 }
 .home_page #container {
+  font-size: 1.5em;
 	width: 100%;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
 	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
 	text-align: left; /* this overrides the text-align: center on the body element. */
@@ -27,15 +27,9 @@ body  {
 	padding: 0 10px 0 20px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
 }
 
-
 #logo { float: left; height: 100px; padding: 5px 0 0 0px; width: 180px;}
 div #logo a { background: url(../../imgs/logo.PNG) no-repeat; height: 95px; width: 180px;}
 #logo a { display: block; text-indent: -9000px; }
-
-#logot { float: left; height: 100px; padding: 0px; width: 360px; background-color:#FFF;}
-div #logot a { background: url(../../imgs/ltitle.PNG) no-repeat; height: 100px; width: 360px; margin-top: 24px;}
-#logot a { display: block; text-indent: -9000px; }
-
 
 #pageHome { background-color:#FFF; }
 /*
@@ -98,123 +92,9 @@ these make the slideshow work
 	margin-left: 88px;
 	text-align: left;}
 
-
-
-
-
-/*-------------------------------------------------
-	Services Pg
--------------------------------------------------*/
-#changing_content .gridH2 h2 { margin-bottom: 0px; }
-#changing_content ul #gallery { border-bottom: 1px solid #ccc; float: left;  width: 940px;}
-#changing_content #gallery li {
-	border-top: 1px solid #ccc;
-	list-style: none;
-	background: #fff url(../../imgs/v_sep_line.gif) no-repeat 231px 0px;
-	float: left;
-	margin: 0px 8px 28px -8px;
-	padding: 10px 16px 0 10px;
-	width: 214px;
-	height:260px;
-}
-#changing_content #gallery li.last { background-image: none; margin-right: 0px; padding-right: 0px; }
-#changing_content #gallery li h4 { color: #000; text-decoration: none; text-transform: uppercase; text-align: center; font: Arial, Helvetica, sans-serif; }
-#changing_content #gallery li span { color: #777; display: inline; overflow: hidden; font-size: 12px; margin: 0px;}
-
-/* Service Icons */
-#changing_content #gallery li div { height: 122px; overflow: hidden; padding-bottom: 10px; position: relative; text-align: center; width: 203px;} /* set default height */
-#changing_content #gallery li div a { display: block;}
-#changing_content #gallery li div img { background-color: #fff; cursor: pointer;}
-
-
-
-/*-------------------------------------------------
-  Services - Individual Pgs
--------------------------------------------------*/
-.sidebarLeft, .svcsContentBox, .svcsInfoBox, .svcsDetailsBox { float: left; }
-.sidebarLeft { margin-right: 20px; width: 220px;}
-.svcsContentBox { width: 700px;}
-
-.svcsNav a { color: #000; font-family: "Interstate"; padding: 0 15px 0 0; text-transform: uppercase;}
-.svcsNav a:hover { color: #db4e43;}
-.svcsNav ul { background: url('images/repeating-slash-bg.gif') repeat-x 0 100%; padding-bottom: 24px; }
-.svcsNav li.current a { background: url('images/pricing-current-bg.gif') no-repeat 100% 2px; color: #db4e43; }
-
-.sidebarLeft h4 { color: #db4e43; margin: 15px 0 14px 0; }
-.sideTestimonials li { margin: 0 0 14px 0; }
-.sideTestimonials li p.quote { background: #dfdcdc url('images/services-sprite.png') no-repeat 0 100%; margin-bottom: 6px; padding: 15px 10px 30px; }
-.sideTestimonials li span { display: block; font-family: "Interstate"; font-size: 10px; line-height: 16px; text-transform: uppercase;}
-.sideTestimonials li span.name { color: #000; }
-
-.svcsBanner { height: 360px; margin: 0 0 20px 0; overflow: hidden; width: 700px;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	#qs{
-	width: 100%;
-	margin-left: 2%;
-	text-align: left;}
-
-	#qs #qsingsec1 ul{
-
-	float: left;
-	margin: 0px 8px 28px 0;
-	padding: 10px 8px 0px 0;
-	width: 20%; }
-
-	#qs #qsingsec2 ul{
-
-	float: left;
-	margin: 0px 8px 28px 20px;
-	padding: 10px 8px 0px 0;
-	width: 25%; }
-
-	#qs #qsingsec3 ul{
-
-	float: left;
-	margin: 0px 8px 28px 20px;
-	padding: 10px 8px 0px 0;
-	width: 45%; }
-
-	#changing_content #aboutus{
-		width: 65%;
-		color: #000;
-		margin-left: 20%;
-
-		}
-
 .home_page #page_content #service1 {
 	float: left; /* since this element is floated, a width must be given */
-	width: 22%; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	width: 33%; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
 	padding: 15px 10px 15px 10px;
 	border-right: 1px double #b9d2e8;
 	border-left: 1px solid #b9d2e8;
@@ -222,59 +102,22 @@ these make the slideshow work
 }
 .home_page #page_content #service2 {
 	float: right; /* since this element is floated, a width must be given */
-	width: 22%; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	width: 33%; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
 	padding: 15px; /* top and bottom padding create visual space within this div */
 	border-left: 1px solid #b9d2e8;
 	border-right: 1px double #b9d2e8;
 
 }
 
-.home_page #page_content #service23 {
+.home_page #page_content #service3 {
 	float: right; /* since this element is floated, a width must be given */
-	width: 23%; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	width: 33%; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
 	padding: 15px 10px; /* top and bottom padding create visual space within this div */
-	border-left: 1px solid #b9d2e8;
-	border-right: 1px double #b9d2e8;
+	
 
 }
 
-/*===========================================================================*\
-	Form Styles
-\*===========================================================================*/
-
-.form-item {
-	margin-bottom: 5px;
-}
-
-.form-input {
-	padding: 3px 10px;
-	border: thin solid #CCCCCC;
-	width: 90%;
-	font-family: inherit;
-	font-size: inherit;
-	color: #555555;
-}
-
-button {
-	border: none;
-}
-
-/*===========================================================================*\
-	Form Styles
-\*===========================================================================*/
-
-
-.home_page #changing_content #mainContent {
-width: 23%;
-	margin: 0 52% 0 25%; /* the right and left margins on this div element creates the two outer columns on the sides of the page. No matter how much content the sidebar divs contain, the column space will remain. You can remove this margin if you want the #mainContent div's text to fill the sidebar spaces when the content in each sidebar ends. */
-	padding: 15px 10px 15px 10px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
-}
-
-
-
-
-
-.home_page #footer {
+#container #footer {
 	padding: 0 10px 0 20px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
 	background-color:#b9d2e8;
 	clear: both;
@@ -283,31 +126,17 @@ width: 23%;
 
 }
 
-.home_page #footer img{
+#container #footer img{
 	padding: 4px 4px 4px 10px;
 	vertical-align: middle;
 }
 
-.home_page #footer #footer_content{ color: #036; font-weight: bold;}
+#container #footer #footer_content{ color: #036; font-weight: bold;}
 
-.home_page #footer a{ color: #000; font-weight: bold;}
+#container #footer a{ color: #000; font-weight: bold;}
 
-.home_page #footer a:hover{ color: #036;}
-.home_page #footer p {
+#container #footer a:hover{ color: #036;}
+#container #footer p {
 	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
 	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
-}
-.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
-	float: right;
-	margin-left: 8px;
-}
-.fltlft { /* this class can be used to float an element left in your page */
-	float: left;
-	margin-right: 8px;
-}
-.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
-	  clear: both;
-    height:0;
-    font-size: 1px;
-    line-height: 0px;
 }
