@@ -7,7 +7,7 @@ body  {
 	font-family: Verdana, Geneva, sans-serif;
   max-width: 100%;
 	overflow-x: hidden;
-	background-color: #dcded9;
+	background-color: #red;
 	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
 	padding: 0;
 	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
@@ -113,7 +113,7 @@ these make the slideshow work
 	float: right; /* since this element is floated, a width must be given */
 	width: 33%; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
 	padding: 15px 10px; /* top and bottom padding create visual space within this div */
-	
+
 
 }
 
