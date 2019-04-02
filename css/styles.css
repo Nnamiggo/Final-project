@@ -7,7 +7,6 @@ body  {
 	font-family: Verdana, Geneva, sans-serif;
   max-width: 100%;
 	overflow-x: hidden;
-	background-color: #red;
 	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
 	padding: 0;
 	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
@@ -18,7 +17,7 @@ body  {
 	width: 100%;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
 	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
 	text-align: left; /* this overrides the text-align: center on the body element. */
-	background-color:#FFF;
+	background-color:F5F6F9;
 }
 .home_page #header {
 	height: 100px;
@@ -31,7 +30,7 @@ body  {
 div #logo a { background: url(../../imgs/logo.PNG) no-repeat; height: 95px; width: 180px;}
 #logo a { display: block; text-indent: -9000px; }
 
-#pageHome { background-color:#FFF; }
+#slide_show { background-color:#FFF; }
 /*
 essential styles:
 these make the slideshow work
@@ -75,19 +74,9 @@ these make the slideshow work
 	 background-image: -o-linear-gradient(top, #CCC, #036);
 	 background-image: linear-gradient(top, #CCC, #036);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#CCC, endColorstr=#036);}
 
-/* Shared Cycle Nav Buttons */
-.cycleNav { bottom: 0px; height: 84px; position: absolute; right: 0px; width: 46px; z-index: 1000;}
-.cycleNav li a { background-image:url('../../imgs/arrow-banner-nav-sprite.png'); background-repeat: no-repeat; display: block; height: 40px; margin: 0 6px 0px 0; text-indent: -9000px; width: 40px;}
-.cycleNav li.prevBtn a { background-position: 0px 0px;}
-.cycleNav li.prevBtn a:hover { background-position: -57px 0px;}
-.cycleNav li.nextBtn a { background-position: 0px -40px;}
-.cycleNav li.nextBtn a:hover { background-position: -57px -40px;}
-.prevBtn, .nextBtn { list-style: none;}
-
-#separator { background-color:#b9d2e8; height: 35PX; color:#FFF;}
+#separator { background-color:#b9d2e8; height: 25PX; color:#FFF;}
 
 #page_content{
-
 	width: 85%;
 	margin-left: 88px;
 	text-align: left;}
