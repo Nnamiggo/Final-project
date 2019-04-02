@@ -81,30 +81,11 @@ these make the slideshow work
 	margin-left: 88px;
 	text-align: left;}
 
-.home_page #page_content #service1 {
-	float: left; /* since this element is floated, a width must be given */
-	width: 33%; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
-	padding: 15px 10px 15px 10px;
-	border-right: 1px double #b9d2e8;
-	border-left: 1px solid #b9d2e8;
-
-}
-.home_page #page_content #service2 {
-	float: right; /* since this element is floated, a width must be given */
-	width: 33%; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
-	padding: 15px; /* top and bottom padding create visual space within this div */
-	border-left: 1px solid #b9d2e8;
-	border-right: 1px double #b9d2e8;
-
-}
-
-.home_page #page_content #service3 {
-	float: right; /* since this element is floated, a width must be given */
-	width: 33%; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
-	padding: 15px 10px; /* top and bottom padding create visual space within this div */
-
-
-}
+	#page_content{
+   display: grid; grid-template-columns: 33% 33% 33%; grid-template-rows: auto;
+   justify-content: space-between; padding: 3px;
+ }
+#page_content #service1 img, #page_content #service2 img, #page_content #service3 img{height: 200px;}
 
 #container #footer {
 	padding: 0 10px 0 20px; /* this padding matches the left alignment of the elements in the divs that appear above it. */

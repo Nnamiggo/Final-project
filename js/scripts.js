@@ -13,7 +13,7 @@ function setupExternalLinks(){
 function initOverlabelValidate(){
   $('form').each(function(){ // use .each for pages that have two forms on them ie Press pages
   $(this).validate();
-  $("label").overlabel();  
+  $("label").overlabel();
 
   jQuery.extend(jQuery.validator.messages, {
     required: 'Required',
@@ -33,7 +33,7 @@ function initFormDropDown() {
       if($(this).parent().parent().hasClass('active')) {
         $(this).parents('.optionDropdown').toggleClass('listOpen');
         $(this).parents('.optionDropdown').siblings('.listOpen').toggleClass('listOpen');
-        // $('#'+id+' .opts').slideToggle(); 
+        // $('#'+id+' .opts').slideToggle();
       }
       return false;
     });
@@ -49,7 +49,7 @@ function initFormDropDown() {
       var dropdown;
 
       optText = $(this).text();
-      val = $(this).attr('id').split('_').slice(-1)[0];       
+      val = $(this).attr('id').split('_').slice(-1)[0];
       dropdown = $(this).parents('.optionDropdown');
 
       // make the list close and set the text to the selected item
@@ -65,8 +65,8 @@ function initFormDropDown() {
       $('#'+id+'  ul').slideToggle();
     }); */
 
-  
-  
+
+
   });
 }
 function filterChildren(dropdown, selectedValue) {
@@ -74,7 +74,7 @@ function filterChildren(dropdown, selectedValue) {
     return false;
   }
   var childDropdown = getChildDropdown(dropdown);
-    
+
   if(childDropdown.length) {
     var anchors = childDropdown.find('ul li a');
     // hide all the items in the child drop down
@@ -87,17 +87,17 @@ function filterChildren(dropdown, selectedValue) {
     resetChildDropdown(childDropdown);
   }
 }
-// get the child drop down that cascades based on the selection made 
+// get the child drop down that cascades based on the selection made
 // in the specified parentDropdown. The dropdowns are named using this pattern:  option_<parent>_<current>
 function getChildDropdown(parentDropdown){
   var childSelector = 'div[id*=_' +
-    getDropdownName(parentDropdown.attr('id')) + 
+    getDropdownName(parentDropdown.attr('id')) +
     '_]:first';
   return $('.optionDropdown').filter(childSelector)
 }
 // update a dropdown text and state to represent the selected item
 function commitDropdownSelection(dropdown, selectedValue) {
-  dropdown.toggleClass('listOpen')  
+  dropdown.toggleClass('listOpen')
     .find('.open')
     .text(selectedValue);
 }
@@ -106,7 +106,7 @@ function commitDropdownSelection(dropdown, selectedValue) {
 function resetChildDropdown(dropdown){
   // clear the selected text
   dropdown.find('.open').text(getDefaultDropdownText());
-  // clear the visual styles 
+  // clear the visual styles
   dropdown.removeClass('selected');
   dropdown.removeClass('listOpen');
   // if this drop down has a child then reset it recursively
@@ -136,7 +136,7 @@ function initServicesHover(){
       "top": "0px"
     })
     $(secondImg).css({"opacity":0});
-    $(firstImg).css({"z-index":10}); 
+    $(firstImg).css({"z-index":10});
     /* setup hover to switch images */
     $(this).parents('li').hover(function(){
         $(secondImg).stop().fadeTo(170,1);
@@ -151,7 +151,7 @@ function initServicesHover(){
   File Upload Button Style
 -------------------------------------------------*/
 function initFileUploadStyle(){
-  //$('input[type=file]').customFileInput();  
+  //$('input[type=file]').customFileInput();
 }
 /*-------------------------------------------------
   Services Accordian
@@ -168,7 +168,7 @@ function initServicesAccordion(){
       .parent('h4').siblings('div').delay(400).slideUp();
     return false;
     }
-  }); 
+  });
 }
 /*-------------------------------------------------
   Image Cycles
@@ -211,8 +211,8 @@ function setupGoogleMap(){
 
     /* Setup Custom Grayscale Style */
     var stylez = [
-        { stylers: [{ 
-          saturation:-100 
+        { stylers: [{
+          saturation:-100
           }]
         }
       ];
@@ -237,7 +237,7 @@ function setupGoogleMap(){
     /* Set Custom Marker */
     var image = 'lib/css/images/printmor-map-marker.png';
     var marker = new google.maps.Marker({
-          position: myLatlng, 
+          position: myLatlng,
           map: map,
           icon: image
       });
@@ -253,7 +253,7 @@ function setupTableStyles(){
       "color":"#000000",
       "font-size":"10px",
       "padding-left":0
-      
+
     });
   });
   /* Tables Within Services Accordion */
@@ -294,7 +294,7 @@ function addOptHelper(e){
   var $e = $(e),
       maxY = parseInt($e.css('maxHeight')),
       innerY = function(){
-        var y = 0, 
+        var y = 0,
             i = 0,
             len = $e.find('li').length;
         for(i = 0; i < len; i++) {
@@ -306,10 +306,10 @@ function addOptHelper(e){
       }();
 
   if(innerY > maxY) {
-    
+
     $e.after('<div class="helper top" /><div class="helper bottom" />');
     $e
-      .parent() // opt 
+      .parent() // opt
         .find('.helper')
         .hide()
         .hover(function(){ // Bind Controls
@@ -320,33 +320,33 @@ function addOptHelper(e){
           $(e).stop();
         })
       .end()// opt
-      .unbind('mouseover') 
+      .unbind('mouseover')
       .mouseover(function(){
         var scrollTop = $e.scrollTop();
         if(scrollTop <= 0){
-          $(this).find('.helper.bottom').show().stop().fadeTo(250, 1);  
+          $(this).find('.helper.bottom').show().stop().fadeTo(250, 1);
         }
         if(scrollTop > 0){
-          $(this).find('.helper.top').show().stop().fadeTo(250, 1); 
+          $(this).find('.helper.top').show().stop().fadeTo(250, 1);
         }
       })
-      .unbind('mouseout') 
+      .unbind('mouseout')
       .mouseout(function(){
-        $(this).find('.helper').stop().fadeTo(250, 0).hide();     
+        $(this).find('.helper').stop().fadeTo(250, 0).hide();
       })
     .end() // opt ul
     .scroll(function(){
       var scrollTop = $(e).scrollTop();
       if(scrollTop <= 0) {
-        $(this).find('.helper.bottom').show().stop().fadeTo(250, 1);   
+        $(this).find('.helper.bottom').show().stop().fadeTo(250, 1);
       }
       if(scrollTop > 0) {
-        $(this).find('.helper.top').show().stop().fadeTo(250, 1);   
+        $(this).find('.helper.top').show().stop().fadeTo(250, 1);
       }
     });
   } else {
     $e
-      .parent() // opt 
+      .parent() // opt
         .find('.helper')
         .remove();
   }
@@ -371,7 +371,7 @@ function setVal(name, val, text, after) {
     .find('.opts ul').animate({
       scrollTop : 0
     }, 0);
-  
+
   // Set input val to prep for ajax request
   $('input[name='+name+']').val(val);
   $('input[name='+name+'_title]').val(text);
@@ -380,13 +380,13 @@ function setVal(name, val, text, after) {
     $next.addClass('active');
     $prev.addClass('active');
   }
-  
+
   // Activcate Submit Button
   if($('.was_hit').length === 4) { // Hard coded for now, will update later
     $('input.inactive').removeClass('inactive');
   } else {
-    // Set status indicator 
-    $next.find('.selected').addClass('working');      
+    // Set status indicator
+    $next.find('.selected').addClass('working');
   }
   after();
 }
@@ -401,36 +401,36 @@ function oc(array){
 
 function updateDrops(data) {
   var i;
-  
+
 
   for (i = 0; i < data.opts.length; i++) {
      var $optDrop = $('.optionDropdown:eq('+i+')'),
          $step = $optDrop.parent(),
          $list = $optDrop.find('ul'),
-         $selected = $optDrop.find('.selected'),     
+         $selected = $optDrop.find('.selected'),
          name = $optDrop.attr('id'),
          val = $('.hidden input[name='+name+']').val(),
          html = '',
          j;
-     
+
      if (data.opts[i].values.length) { // if an option contains values
        for(j = 0; j < data.opts[i].values.length; j++) { // loop over options values and build html
           if(data.opts[i].values.length) {
             html += '<li><a href="#" class="'+name+'" id="option_'+data.opts[i].ids[j]+'">'+data.opts[i].values[j]+'</a></li>';
             if($selected.text() === 'n/a') {
               $selected.text('Choose');
-              $step.removeClass('empty');    
+              $step.removeClass('empty');
             }
           }
        }
-       if(val in oc(data.opts[i].ids) === false) { 
-          $selected.text('Choose').removeClass('was_hit'); 
+       if(val in oc(data.opts[i].ids) === false) {
+          $selected.text('Choose').removeClass('was_hit');
        }
-       
+
        $list.empty().append(html);
        $optDrop.remove('.helper');
-       
-       addOptHelper($list); 
+
+       addOptHelper($list);
      } else {
         $selected.text('n/a').addClass('was_hit');
         $step.addClass('empty').find('.submit').addClass('inactive');
@@ -445,9 +445,9 @@ function updateDrops(data) {
       $('form a.submit').text('Download Not Available').attr('href', '#');
     }
 
-    $selected.removeClass('working'); 
+    $selected.removeClass('working');
 
-  } // end loop on opts    
+  } // end loop on opts
 
 }
 
@@ -462,27 +462,27 @@ function resetSelector(e) {
     .find('ul')
     .animate({
       scrollTop : 0
-      }, 0) 
+      }, 0)
   .end()
     .find('form .hidden input:not([name='+name+'])')
     .val('')
   .end()
     .find('form .submit')
-    .addClass('inactive')   
+    .addClass('inactive')
   .end()
     .find('.step:not(:first)')
     .removeClass('active')
       .find('.was_hit')
       .removeClass('was_hit')
-    .end()  
+    .end()
       .find('.opts')
       .removeClass('open')
         .find('ul')
-        .empty();  
-  
+        .empty();
+
   $.getJSON(url, function(data) {
     updateDrops(data);
-  });     
+  });
 }
 
 /*-------------------------------------------------
@@ -504,32 +504,32 @@ $(document).ready(function(){
   setupGoogleMap();
   setupTableStyles();
   setupTwitterBirdEye();
-  initFileUploader(); 
+  initFileUploader();
 
   /* Setup General Styles and Classes */
   $('#primeNav li:last-child').addClass('last');
   $('.homeFeatSvcs ul li:last-child').addClass('last');
   $('#gallery li:nth-child(4n)').addClass('last');
   $('#gallery li:lt(4)').css({'border-color':'#fff'});
-  
-  
+
+
   // Get Latest
   //PrintMor.getLatest();
-  
-  
+
+
   // Prep Opts
   $('.optionWrap .opts').each(function(){
     var $list = $(this).find('ul');
     if($list.length){
-      addOptHelper($list);     
+      addOptHelper($list);
     } else {
       $(this).append('<ul />');
     }
   });
-  
+
   // Selector Click
   $('.optionWrap .opts li a').live('click', function(){
-    var $this = $(this),  
+    var $this = $(this),
         $form = $this.parents('form'),
         action = ($form.hasClass('multi')) ? '/json_opts.php' : $form.attr('action'),
         name = $this.attr('class'),
@@ -556,10 +556,10 @@ $(document).ready(function(){
       $.getJSON(url, function(data) {
         updateDrops(data);
       });
-    });   
+    });
 
     return false;
   });
-  
-  
+
+
 });
