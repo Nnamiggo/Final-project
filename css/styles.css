@@ -30,7 +30,7 @@ body  {
 
 #logo img {width: 200px; height: 100px;}
 
-#logo h2 {position: relative; margin-top: -10px;}
+#logo h2 {position: relative; margin-top: -50px; margin-left: 200px; color: white; z-index: -1;}
 
 #slide_show { background-color:#FFF; }
 /*
