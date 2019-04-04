@@ -1,12 +1,3 @@
-/*-------------------------------------------------
-  Login Button
-	on Click
-	-display the login forms
-	this will not appear if a user is loged in but in its place will be a user name
--------------------------------------------------*/
-$("#login").click(function() { //hide each button on click
-	document.location.href = "location.html";
-});
 
 /*-------------------------------------------------
   Image Cycles
@@ -45,4 +36,15 @@ function initCycle(){
 -------------------------------------------------*/
 $(document).ready(function(){
 initCycle();
+
+/*-------------------------------------------------
+  Login Button
+	on Click
+	-display the login forms
+	this will not appear if a user is loged in but in its place will be a user name
+-------------------------------------------------*/
+$("#login").click(function() { //hide each button on click
+	location.href = "login.html";
+});
+
 });
