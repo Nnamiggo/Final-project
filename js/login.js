@@ -1,3 +1,15 @@
+
+const invocation = new XMLHttpRequest();
+const url = 'http://bar.other/resources/public-data/';
+
+function callOtherDomain() {
+  if(invocation) {
+    invocation.open('GET', url, true);
+    invocation.onreadystatechange = handler;
+    invocation.send();
+  }
+}
+
 $(document).ready(function(){
 $("#login").click(function(){
 var user_name = $("#uname").val();
