@@ -13,10 +13,7 @@ $(document).ready(function() {
       $('input[type="text"],input[type="password"]').css("box-shadow", "0 0 3px red");
       alert("Please fill all fields...!!!!!!");
     } else {
-      $.post("login.php", {
-          user_name1: user_name,
-          password1: password
-        },
+      $.post("login.php", {user_name1: user_name, password1: password},
         function(data) {
           if (data == 'Invalid Username.......') {
             $('input[type="text"]').css({
@@ -45,8 +42,7 @@ $(document).ready(function() {
             // } else{
             // alert(data);}
           }
-        }
-      );
+        });//close post
     }
   });
 });
