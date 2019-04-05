@@ -13,6 +13,6 @@ echo "Successfully Logged in...";
 echo "Email or Password is wrong...!!!!";
 //sugest sign up or try anagain
 }
-
 mysql_close ($connection); // Connection Closed.
+
 ?>
