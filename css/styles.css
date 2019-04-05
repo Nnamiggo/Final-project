@@ -89,6 +89,11 @@ these make the slideshow work
  }
 #page_content #service1 img, #page_content #service2 img, #page_content #service3 img{height: 200px;}
 
+/* #page_content .group:after { visibility: hidden;
+	display: block; font-size: 10; content: " "; clear: both; height: 0; }
+#page_content .group { display: inline-block; clear: both; position: absolute;}
+ /* * html .group { height: 1%; } #page_content .group { display: block; } */ */
+
 #container #footer {
 	padding: 0 10px 0 20px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
 	background-color:#b9d2e8;
