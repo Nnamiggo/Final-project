@@ -127,3 +127,7 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+.about{
+
+	width: 60%; margin-left: 20px; height: auto; margin-bottom: 50px;
+}
